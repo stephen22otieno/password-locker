@@ -31,7 +31,7 @@ class TestPassword(unittest.TestCase):
         # if __name__ == '__main__':
         #     unittest.main()
 
-            def test_save_password(self):
+        def test_save_password(self):
                 '''
                 test_save_password test case to test if the password is saved into
                 the password list

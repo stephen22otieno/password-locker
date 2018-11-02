@@ -4,9 +4,9 @@ class Password:
     """
 
     password_list = [] # Empty passsword list
-
-    def __init__(self,first_name,last_name,login,password):
-
+   # Init method up here 
+      def __init__(self,first_name,last_name,login,password):
+     
         # docstring removed for simplicity
 
         self.first_name = first_name
