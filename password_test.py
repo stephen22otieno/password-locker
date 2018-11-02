@@ -77,7 +77,8 @@ class TestPassword(unittest.TestCase):
             test_password.save_password()
             self.assertEqual(len(Password_locker.password_list),2)
 
-            if __name__ == '__main__':
-                 unittest.main()
+            # if __name__ == '__main__':
+            #      unittest.main()
+                
                 
 
