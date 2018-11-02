@@ -1,4 +1,4 @@
-class Password
+class passsword
 """
 Class that generates new instances of password
 """
