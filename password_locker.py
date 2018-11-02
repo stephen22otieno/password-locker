@@ -3,13 +3,12 @@ class Password:
     Class that generates new instances of password
     """
 
-    password_list = [] # Empty passsword list
-   # Init method up here 
-      def __init__(self,first_name,last_name,login,password):
-     
-        # docstring removed for simplicity
+    password_locker = [] # Empty password list
+     # Init method up here
+    def save_password(self):
 
-        self.first_name = first_name
-        self.last_name = last_name
-        self.login = login
-        self.password = password
+        '''
+        save_password method saves password objects into password_list
+        '''
+
+        Password.password_list.append(self)
