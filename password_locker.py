@@ -1,11 +1,11 @@
-class Passsword
-"""
-Class that generates new instances of password
-"""
+class Password:
+    """
+    Class that generates new instances of password
+    """
 
-     password_list = [] # Empty passsword list
+    password_list = [] # Empty passsword list
 
-def __init__(self,first_name,last_name,login,password):
+    def __init__(self,first_name,last_name,login,password):
 
         # docstring removed for simplicity
 
