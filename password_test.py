@@ -39,7 +39,24 @@ class TestPassword(unittest.TestCase):
             self.new_password.save_password() # saving the new password
             self.assertEqual(len(Password_locker.password_list),1)
 
-            if __name__ == '__main__':
-                unittest.main()
+            # if __name__ == '__main__':
+            #     unittest.main()
+
+            # Items up here...
+
+        def test_save_multiple_password(self):
+            '''
+            test_save_multiple_password to check if we can save multiple password
+            objects to our password_list
+            '''
+            self.new_password.save_password()
+            test_password = Password("Test","user","123456789","test.password") # new password
+            test_password.save_password()
+            self.assertEqual(len(Password-locker.password_list),2)
+
+
+        if __name__ == '__main__':
+            unittest.main()
+
                 
 
