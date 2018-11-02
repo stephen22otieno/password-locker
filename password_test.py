@@ -96,17 +96,17 @@ class TestPassword(unittest.TestCase):
             #     unittest.main() 
             
     def test_find_contact_by_number(self):
-        '''
-        test to check if we can find a contact by phone number and display information
-        '''
+            '''
+            test to check if we can find a password by first_name and display information
+            '''
 
-        self.new_contact.save_contact()
-        test_contact = Contact("Test","user","0711223344","test@user.com") # new contact
-        test_contact.save_contact()
+            self.new_password.save_pasword()
+            test_password = Password("Test","user","123456789","test@user.com") # new password
+            test_password.save_password()
 
-        found_contact = Contact.find_by_number("0711223344")
+            found_password = password.find_by_first_name("Stephen")
 
-        self.assertEqual(found_contact.email,test_contact.email)        
+            self.assertEqual(found_password.password,test_password.password)        
 
 
 
