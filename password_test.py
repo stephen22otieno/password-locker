@@ -95,13 +95,13 @@ class TestPassword(unittest.TestCase):
             # if __name__ == '__main__':
             #     unittest.main() 
             
-    def test_find_contact_by_number(self):
+    def test_find_password_by_number(self):
             '''
             test to check if we can find a password by first_name and display information
             '''
 
             self.new_password.save_pasword()
-            test_password = Password("Test","user","123456789","test@user.com") # new password
+            test_password = Password("Test","user","123456789","test.password") # new password
             test_password.save_password()
 
             found_password = password.find_by_first_name("Stephen")
