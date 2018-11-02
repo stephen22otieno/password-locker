@@ -59,5 +59,25 @@ class TestPassword(unittest.TestCase):
         #     unittest.main()
 
 
+  # setup and class creation up here
+    def tearDown(self):
+            '''
+            tearDown method that does clean up after each test case has run.
+            '''
+            Password_locker.password_list = []
+
+     # other test cases here
+    def test_save_multiple_password(self):
+            '''
+            test_save_multiple_password to check if we can save multiple password
+            objects to our password_list
+            '''
+            self.new_password.save_password()
+            test_password = Password("Test","user","0712345678","test@user.com") # new contact
+            test_password.save_password()
+            self.assertEqual(len(Password_locker.password_list),2)
+
+            if __name__ == '__main__':
+                 unittest.main()
                 
 
