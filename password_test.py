@@ -92,6 +92,21 @@ class TestPassword(unittest.TestCase):
             self.new_password.delete_contact()# Deleting a password object
             self.assertEqual(len(Password_locker.password_list),1)
             
-            if __name__ == '__main__':
-                unittest.main()         
+            # if __name__ == '__main__':
+            #     unittest.main() 
+            
+    def test_find_contact_by_number(self):
+        '''
+        test to check if we can find a contact by phone number and display information
+        '''
+
+        self.new_contact.save_contact()
+        test_contact = Contact("Test","user","0711223344","test@user.com") # new contact
+        test_contact.save_contact()
+
+        found_contact = Contact.find_by_number("0711223344")
+
+        self.assertEqual(found_contact.email,test_contact.email)        
+
+
 
