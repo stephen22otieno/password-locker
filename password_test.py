@@ -80,5 +80,18 @@ class TestPassword(unittest.TestCase):
             # if __name__ == '__main__':
             #      unittest.main()
                 
-                
+       # More tests above
+    def test_delete_password(self):
+            '''
+            test_delete_password to test if we can remove a password from our password list
+            '''
+            self.new_password.save_password()
+            test_password = Password("Test","user","123456789","test.password") # new password
+            test_password.save_password()
+
+            self.new_password.delete_contact()# Deleting a password object
+            self.assertEqual(len(Password_locker.password_list),1)
+            
+            if __name__ == '__main__':
+                unittest.main()         
 
