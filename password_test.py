@@ -28,8 +28,8 @@ class TestPassword(unittest.TestCase):
           self.assertEqual(self.new_password.login,"Login")
           self.assertEqual(self.new_password.password,"123456789")
 
-        if __name__ == '__main__':
-            unittest.main()
+        # if __name__ == '__main__':
+        #     unittest.main()
 
             def test_save_password(self):
                 '''
