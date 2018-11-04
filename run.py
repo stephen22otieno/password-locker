@@ -19,4 +19,12 @@ def del_password(password):
     '''
     Function to delete a password
     '''
-    password.delete_password()
+    password.delete_password()  
+
+
+
+def find_password(number):
+    '''
+    Function that finds a password by number and returns the password
+    '''
+    return Password.find_by_number(number)
