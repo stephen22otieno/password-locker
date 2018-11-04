@@ -23,4 +23,19 @@ class Password:
         save_password method saves password objects into password_list
         '''
 
-        Password.password_list.append(self)
+        Password.password_list.append(self)  
+
+         @classmethod
+    def find_by_number(cls,number):
+        '''
+        Method that takes in a number and returns a password that matches that number.
+
+        Args:
+            number: Phone number to search for
+        Returns :
+            password of person that matches the number.
+        '''
+
+        for password in cls.password_list:
+            if password.phone_number == number:
+                return password
