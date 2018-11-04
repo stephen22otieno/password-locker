@@ -70,4 +70,12 @@ class Password:
             if password.phone_number == number:
                     return True
 
-        return False
+        return False  
+
+
+            @classmethod
+    def display_password(cls):
+        '''
+        method that returns the password list
+        '''
+        return cls.password_list
