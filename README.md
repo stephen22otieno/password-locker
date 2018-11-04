@@ -1,4 +1,4 @@
-## Password Locker
+## Password-Locker
 
 ## By Stephen Oitieno
 
@@ -26,18 +26,22 @@ There are no known bugs affecting the website at the moment.But if the user enco
 
 ## Technologies Used
 The site has incorporated the use of python in the writing of the application.
-Support and contact details
-For assistance and Queries please email maxwellharon54@gmail.com.
+
+
 ## Running the Application
 To run the application, in your terminal:
   $ chmod +x password.py
   $ ./password.py
+
 ## Testing the Application
   To run the tests for the class file:
-
   $ python3.6 user_credentials_test.py
-## Technologies Used
- Python3.6
+
+  
+## Support and Contact Details
+  For assistance and Questions please email Stephenombiro22@gmail.com
+
+
 ## License
   MIT ©2017 Mary Ng'ang'a 
 
