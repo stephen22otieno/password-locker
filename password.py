@@ -38,4 +38,19 @@ class Password:
 
         for password in cls.password_list:
             if password.phone_number == number:
-                return password
+                return password   
+
+
+
+    def test_password_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the pasword.
+        '''
+
+        self.new_password.save_password()
+        test_password = Password("Test","user","0746432419","test@user.com") # new password
+        test_password.save_password()
+
+        password_exists = Password.password_exist("0746432419")
+
+        self.assertTrue(password_exists)
