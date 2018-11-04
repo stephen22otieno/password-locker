@@ -97,5 +97,20 @@ class TestPassword(unittest.TestCase):
         self.assertEqual(len(Password.password_list),1)
 
 
+
+
+    def test_find_password_by_number(self):
+        '''
+        test to check if we can find a password by phone number and display information
+        '''
+
+        self.new_contact.save_contact()
+        test_password = Password("Test","user","0746432419","test@user.com") # new password
+        test_password.save_password()
+
+        found_password = Password.find_by_number("0746432419")
+
+        self.assertEqual(found_password.email,test_password.email)
+
         if __name__ == '__main__':
             unittest.main()
