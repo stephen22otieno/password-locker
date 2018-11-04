@@ -3,6 +3,8 @@
     Class that generates new instances of passwords
     """
 
+    password_list = [] # Empty password list
+
     def __init__(self,first_name,last_name,phone_number,email):
 
       # docstring removed for simplicity
