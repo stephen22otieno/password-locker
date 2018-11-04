@@ -78,4 +78,13 @@ class Password:
         '''
         method that returns the password list
         '''
-        return cls.password_list
+        return cls.password_list  
+
+
+        import pyperclip
+        ......................
+
+       @classmethod
+    def copy_email(cls,number):
+        password_found = Password.find_by_number(number)
+        pyperclip.copy(password_found.email)
