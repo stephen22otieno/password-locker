@@ -33,7 +33,7 @@ class TestPassword(unittest.TestCase):
 # if __name__ == '__main__':
 #     unittest.main()
 
-     def test_save_contact(self):
+    def test_save_contact(self):
         '''
         test_save_contact test case to test if the contact object is saved into
          the contact list
@@ -41,5 +41,22 @@ class TestPassword(unittest.TestCase):
         self.new_contact.save_contact() # saving the new contact
         self.assertEqual(len(Contact.contact_list),1)
 
-        if __name__ ==  '__main__':
+        # if __name__ ==  '__main__':
+        #     unittest.main() 
+
+
+ # Items up here...
+
+    def test_save_multiple_password(self):
+        '''
+        test_save_multiple_password to check if we can save multiple password
+        objects to our password_list
+        '''
+        self.new_password.save_password()
+        test_password = password("Test","user","0746432419","test@user.com") # new password
+        test_password.save_password()
+        self.assertEqual(len(Password.password_list),2)
+
+
+        if __name__ == '__main__':
             unittest.main()
