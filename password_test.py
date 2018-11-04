@@ -66,18 +66,36 @@ class TestPassword(unittest.TestCase):
         '''
         tearDown method that does clean up after each test case has run.
         '''
-        Contact.contact_list = []
+        Password.password_list = []
 
 # other test cases here
-    def test_save_multiple_contact(self):
+    def test_save_multiple_password(self):
         '''
-        test_save_multiple_contact to check if we can save multiple contact
-        objects to our contact_list
+        test_save_multiple_password to check if we can save multiple password
+        objects to our password_list
         '''
-        self.new_contact.save_contact()
-        test_contact = Contact("Test","user","0712345678","test@user.com") # new contact
-        test_contact.save_contact()
-        self.assertEqual(len(Contact.contact_list),2)
+        self.new_password.save_password()
+        test_password = Password("Test","user","0746432419","test@user.com") # new password
+        test_password.save_password()
+        self.assertEqual(len(Password.password_list),2)
+
+        # if __name__ == '__main__':
+            # unittest.main()
+
+
+
+# More tests above
+    def test_delete_password(self):
+        '''
+        test_delete_password to test if we can remove a password from our password list
+        '''
+        self.new_password.save_password()
+        test_password = Password("Test","user","0746432419","test@user.com") # new password
+        test_password.save_password()
+
+        self.new_Password.delete_password()# Deleting a password object
+        self.assertEqual(len(Password.password_list),1)
+
 
         if __name__ == '__main__':
             unittest.main()
