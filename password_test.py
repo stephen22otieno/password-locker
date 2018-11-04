@@ -113,4 +113,12 @@ class TestPassword(unittest.TestCase):
         self.assertEqual(found_password.email,test_password.email)
 
         if __name__ == '__main__':
-            unittest.main()
+            unittest.main()   
+
+
+   def test_display_all_passwords(self):
+        '''
+        method that returns a list of all passwords saved
+        '''
+
+        self.assertEqual(Password.display_passwords(),Password.password_list)
