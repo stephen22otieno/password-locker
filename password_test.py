@@ -1,5 +1,6 @@
 import unittest # Importing the unittest module
 from password import Password # Importing the password class
+from  immport pyperclip  # Importing the password class
 
 class TestPassword(unittest.TestCase):
 
@@ -121,4 +122,15 @@ class TestPassword(unittest.TestCase):
         method that returns a list of all passwords saved
         '''
 
-        self.assertEqual(Password.display_passwords(),Password.password_list)
+        self.assertEqual(Password.display_passwords(),Password.password_list)  
+
+
+     def test_copy_email(self):
+        '''
+        Test to confirm that we are copying the email address from a found password
+        '''
+
+        self.new_password.save_password()
+        Password.copy_email("0746432419")
+
+        self.assertEqual(self.new_password.email,pyperclip.paste())
