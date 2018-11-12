@@ -43,6 +43,7 @@ To run the application, in your terminal:
 
 
 ## License
-  MIT ©2017 Mary Ng'ang'a 
+  MIT ©2017 Stephen Otieno
 
-  ## LINK: https://stephen22otieno.github.io/password-locker/.
+  ## LINK:
+  https://stephen22otieno.github.io/password-locker/.
